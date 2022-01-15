@@ -1,0 +1,39 @@
+@media (min-width: 768px) {
+    .navbar {
+
+        &__mobile {
+            position: absolute;
+            top: 80px;
+            height: 244px;
+        }
+    }
+
+    .header {
+
+        &__title {
+            font-size: 8rem;
+        }
+
+        &__btn {
+            margin-top: 1.5em;
+            padding: 1em 4em;
+            font-size: 1.8rem;
+        }
+    }
+
+    .features {
+        &__title {
+            font-size: 5rem;
+        }
+    }
+
+    .counter {
+        font-size: 5rem;
+    }
+
+    .partners {
+        &__title {
+            font-size: 5rem;
+        }
+    }
+}

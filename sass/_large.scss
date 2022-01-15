@@ -1,0 +1,52 @@
+@media (min-width: 992px) {
+	.navbar {
+		&__mobile {
+			display: none;
+		}
+
+		&__desktop {
+			display: block;
+		}
+
+		&__item {
+			&--special {
+				margin-left: 0.5em;
+			}
+		}
+	}
+
+	.hamburger {
+		display: none;
+	}
+
+	.counter-box {
+		margin: 2em 0;
+	}
+
+	.partners {
+		&__box {
+			padding: 11em 0;
+		}
+	}
+
+	.commands {
+		margin: 16em 1em;
+
+		&__box {
+			align-items: start;
+			flex-direction: row;
+			padding: 0;
+		}
+
+		&__menu {
+			position: sticky;
+			top: 0;
+			padding: 1em;
+			width: 300px;
+		}
+
+		&__list {
+			padding: 1em;
+		}
+	}
+}

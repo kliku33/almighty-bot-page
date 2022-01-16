@@ -378,7 +378,7 @@ body {
 	}
 
 	&__links .fa-twitch:hover {
-		background-color: #a970ff;
+		background-color: #6441A4;
 	}
 
 	&__links .fa-discord:hover {
@@ -408,8 +408,34 @@ body {
 }
 
 // COMMANDS
+.description {
+	margin: 7em 1em 0;
+	
+	&__box {
+		padding: 1em;
+	}
+
+	&__title {
+		margin-top: 2em;
+		font-size: 1.8rem;
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+
+	&__text {
+		margin: 1em 0;
+		line-height: 20px;
+	}
+
+	&__text span {
+		padding: 0.1em .3em;
+		background-color: $primary-light;
+		border-radius: 3px;
+	}
+}
+
 .commands {
-	margin: 5em 1em;
+	margin: 1em 1em 3em;
 
 	&__box {
 		display: flex;

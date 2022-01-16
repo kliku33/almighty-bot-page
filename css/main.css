@@ -482,7 +482,7 @@ body {
 }
 
 .partners__links .fa-twitch:hover {
-  background-color: #a970ff;
+  background-color: #6441A4;
 }
 
 .partners__links .fa-discord:hover {
@@ -511,8 +511,34 @@ body {
   background-color: #00FF7F;
 }
 
+.description {
+  margin: 7em 1em 0;
+}
+
+.description__box {
+  padding: 1em;
+}
+
+.description__title {
+  margin-top: 2em;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.description__text {
+  margin: 1em 0;
+  line-height: 20px;
+}
+
+.description__text span {
+  padding: 0.1em .3em;
+  background-color: #212121;
+  border-radius: 3px;
+}
+
 .commands {
-  margin: 5em 1em;
+  margin: 1em 1em 3em;
 }
 
 .commands__box {
@@ -884,7 +910,7 @@ footer {
     padding: 11em 0;
   }
   .commands {
-    margin: 16em 1em;
+    margin: 3em 1em 5em;
   }
   .commands__box {
     -webkit-box-align: start;

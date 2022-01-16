@@ -4,8 +4,10 @@ const menuSections = document.querySelectorAll('.commands__section')
 const menuTabs = document.querySelectorAll('.commands__btn')
 const accordion = document.querySelector('.commands__item-info')
 const accordionBtns = document.querySelectorAll('.commands__item-btn')
+const timesIcon = document.querySelector('.commands__search-icon-box .fa-times')
+const searchIcon = document.querySelector('.commands__search-icon-box .fa-search')
 
-const searchEngine = e => {
+const searchEngine = (e) => {
 
     const text = e.target.value.toLowerCase();
 
@@ -17,6 +19,23 @@ const searchEngine = e => {
             el.style.display = 'none'
         }
     });
+
+	if (text !== '') {
+		timesIcon.style.display = 'block'
+		searchIcon.style.display = 'none'
+	}
+
+	if (text === '') {
+		timesIcon.style.display = 'none'
+		searchIcon.style.display = 'block'
+	}
+}
+
+const searchReset = () => {
+	search.value = ''
+	item.forEach(el => el.style.display = 'block')
+	timesIcon.style.display = 'none'
+	searchIcon.style.display = 'block'
 }
 
 const showInfo = id => {
@@ -56,3 +75,4 @@ const clickOutsideAccordion = e => {
 accordionBtns.forEach(btn => btn.addEventListener('click', openAccordionItems))
 window.addEventListener('click', clickOutsideAccordion)
 search.addEventListener('keyup', searchEngine)
+timesIcon.addEventListener('click', searchReset)

@@ -2,7 +2,7 @@ const counterItems = document.querySelectorAll('.counter')
 const counterBox = document.querySelector('.counter-box')
 
 const options = {
-	rootMargin: '-130px',
+	rootMargin: '-70px',
 }
 
 const startCounter = entry => {

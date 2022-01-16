@@ -523,12 +523,14 @@ body {
 			margin-right: .6em;
 			width: 20px;
 			text-align: center;
+			pointer-events: none;
 		}
-
+		
 		&-btn span {
 			padding: 0.3em .5em;
 			background-color: $primary;
 			border-radius: 3px;
+			pointer-events: none;
 		}
 
 		&-info {

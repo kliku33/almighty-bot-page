@@ -647,12 +647,14 @@ body {
   margin-right: .6em;
   width: 20px;
   text-align: center;
+  pointer-events: none;
 }
 
 .commands__item-btn span {
   padding: 0.3em .5em;
   background-color: #141518;
   border-radius: 3px;
+  pointer-events: none;
 }
 
 .commands__item-info {

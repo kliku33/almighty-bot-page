@@ -552,6 +552,15 @@ body {
 			outline: none;
 		}
 	}
+
+	&__error {
+		margin: 1em .5em;
+		display: none;
+	}
+}
+
+.item-active {
+	display: block;
 }
 
 .active {

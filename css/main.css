@@ -686,6 +686,15 @@ body {
   outline: none;
 }
 
+.commands__error {
+  margin: 1em .5em;
+  display: none;
+}
+
+.item-active {
+  display: block;
+}
+
 .active {
   display: block;
 }

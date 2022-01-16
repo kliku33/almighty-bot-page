@@ -78,35 +78,62 @@
                 </div>
                 <div class="commands__list">
                     <div class="commands__search-box"><input type="text" class="commands__search" placeholder="Search..."><div class="commands__search-icon-box"><i class="fas fa-search"></i><i class="fas fa-times"></i></div></div>
+                    <p class="commands__error">No results.</p>
                     <div class="commands__section commands__section--active" id="first-tab">
                         <div class="commands__item">
                             <button class="commands__item-btn"><i class="fas fa-info"></i> <span>channel-info</span></button>
                             <div class="commands__item-info">
-                                <p class="commands__item-info-text">...</p>
+                                <p class="commands__item-info-text">
+                                    Informacje o danym kanale. <br><br>
+                                    Użycie: <br>
+                                    !channel-info <#kanał/nazwa/ID> <br><br>
+                                    Przykład: <br>
+                                    !channel-info #help
+                                </p>
                             </div>
                         </div>
                         <div class="commands__item">
                             <button class="commands__item-btn"><i class="fas fa-info"></i> <span>help</span></button>
                             <div class="commands__item-info">
-                                <p class="commands__item-info-text">...</p>
+                                <p class="commands__item-info-text">
+                                    Spis funkcji naszego bota.
+                                </p>
                             </div>
                         </div>
                         <div class="commands__item">
                             <button class="commands__item-btn"><i class="fas fa-info"></i> <span>invite</span></button>
                             <div class="commands__item-info">
-                                <p class="commands__item-info-text">...</p>
+                                <p class="commands__item-info-text">
+                                    Link z zaproszeniem naszego bota.
+                                </p>
                             </div>
                         </div>
                         <div class="commands__item">
                             <button class="commands__item-btn"><i class="fas fa-info"></i> <span>role-info</span></button>
                             <div class="commands__item-info">
-                                <p class="commands__item-info-text">...</p>
+                                <p class="commands__item-info-text">
+                                    Informacje o danej roli. <br><br>
+                                    Użycie: <br>
+                                    !role-info <@rola/nazwa/ID> <br><br>
+                                    Przykład: <br>
+                                    !role-info 907221033260560405
+                                </p>
                             </div>
                         </div>
                         <div class="commands__item">
                             <button class="commands__item-btn"><i class="fas fa-info"></i> <span>serverinfo</span></button>
                             <div class="commands__item-info">
-                                <p class="commands__item-info-text">...</p>
+                                <p class="commands__item-info-text">
+                                    Informacje o serwerze, na którym jest używana komenda.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="commands__item">
+                            <button class="commands__item-btn"><i class="fas fa-info"></i> <span>uptime</span></button>
+                            <div class="commands__item-info">
+                                <p class="commands__item-info-text">
+                                    Czas nieprzerwanej pracy naszego bota.
+                                </p>
                             </div>
                         </div>
                         <div class="commands__item">
@@ -268,103 +295,201 @@
                         <div class="commands__item">
                             <button class="commands__item-btn"><i class="fas fa-coins"></i> <span>add-money</span></button>
                             <div class="commands__item-info">
-                                <p class="commands__item-info-text">...</p>
+                                <p class="commands__item-info-text">
+                                    Dodaje określoną kwotę do majątku użytkownika. <br><br>
+                                    Użycie: <br>
+                                    !add-money <@user> <cash | bank> <kwota> <br><br>
+                                    Przykład: <br>
+                                    !add-money @Mickey#0620 cash 1234
+                                </p>
                             </div>
                         </div>
                         <div class="commands__item">
                             <button class="commands__item-btn"><i class="fas fa-coins"></i> <span>balance</span></button>
                             <div class="commands__item-info">
-                                <p class="commands__item-info-text">...</p>
+                                <p class="commands__item-info-text">
+                                    Pokazuje aktualny stan konta użytkownika. <br><br>
+                                    Użycie: <br>
+                                    !balance [@user, user ID] <br><br>
+                                    Przykład: <br>
+                                    !balance 858410509454802944
+                                </p>
                             </div>
                         </div>
                         <div class="commands__item">
                             <button class="commands__item-btn"><i class="fas fa-coins"></i> <span>blackjack</span></button>
                             <div class="commands__item-info">
-                                <p class="commands__item-info-text">...</p>
+                                <p class="commands__item-info-text">
+                                    Rozpoczyna rozgrywkę w karty. Wygrana gra zwraca dwukrotność postawionej kwoty. <br><br>
+                                    Użycie: <br>
+                                    !blackjack <kwota> <br><br>
+                                    Przykład: <br>
+                                    !blackjack 500
+                                </p>
                             </div>
                         </div>
                         <div class="commands__item">
                             <button class="commands__item-btn"><i class="fas fa-coins"></i> <span>buy</span></button>
                             <div class="commands__item-info">
-                                <p class="commands__item-info-text">...</p>
+                                <p class="commands__item-info-text">
+                                    Możliwość kupna przedmiotu ze sklepu. <br><br>
+                                    Użycie: <br>
+                                    !buy <ID item> <br><br>
+                                    Przykład: <br>
+                                    !buy 2
+                                </p>
                             </div>
                         </div>
                         <div class="commands__item">
                             <button class="commands__item-btn"><i class="fas fa-coins"></i> <span>coinflip</span></button>
                             <div class="commands__item-info">
-                                <p class="commands__item-info-text">...</p>
+                                <p class="commands__item-info-text">
+                                    Rozpoczyna grę w "Rzut monetą". Wygrana gra zwraca dwukrotność postawionej kwoty. <br><br>
+                                    Użycie: <br>
+                                    !coinflip <orzeł | reszka> <kwota> <br><br>
+                                    Przykład: <br>
+                                    !coinflip reszka 1234
+                                </p>
                             </div>
                         </div>
                         <div class="commands__item">
                             <button class="commands__item-btn"><i class="fas fa-coins"></i> <span>crime</span></button>
                             <div class="commands__item-info">
-                                <p class="commands__item-info-text">...</p>
+                                <p class="commands__item-info-text">
+                                    Dokonujesz przestępstwa. Złapanie przez policję powoduję karę grzywny. <br><br>
+                                    Użycie: <br>
+                                    !crime <br><br>
+                                    Adnotacje: <br>
+                                    Potrzebujesz broni aby dokonać przestępstwa!
+                                </p>
                             </div>
                         </div>
                         <div class="commands__item">
                             <button class="commands__item-btn"><i class="fas fa-coins"></i> <span>deposit</span></button>
                             <div class="commands__item-info">
-                                <p class="commands__item-info-text">...</p>
+                                <p class="commands__item-info-text">
+                                    Przenosisz swoje pieniądze do banku. <br><br>
+                                    Użycie: <br>
+                                    !deposit <kwota | all> <br><br>
+                                    Przykład: <br>
+                                    !deposit 1234
+                                </p>
                             </div>
                         </div>
                         <div class="commands__item">
                             <button class="commands__item-btn"><i class="fas fa-coins"></i> <span>hack</span></button>
                             <div class="commands__item-info">
-                                <p class="commands__item-info-text">...</p>
+                                <p class="commands__item-info-text">
+                                    Możliwość zhakowania konta bankowego innego użytkownika. <br><br>
+                                    Użycie: <br>
+                                    !hack <@User> <br><br>
+                                    Przykład: <br>
+                                    !hack @Mickey#0620 <br><br>
+                                    Adnotacje: <br>
+                                    Potrzebujesz "Umiejętność hakowania" ze sklepu.
+                                </p>
                             </div>
                         </div>
                         <div class="commands__item">
                             <button class="commands__item-btn"><i class="fas fa-coins"></i> <span>leaderboard</span></button>
                             <div class="commands__item-info">
-                                <p class="commands__item-info-text">...</p>
+                                <p class="commands__item-info-text">
+                                    Wyświetla top 10 najbogatszych osób na serwerze lub użytkowników z największą ilością reputacji. <br><br>
+                                    Użycie: <br>
+                                    !leaderboard [cash | bank | rep] <br><br>
+                                    Przykład: <br>
+                                    !leaderboard cash
+                                </p>
                             </div>
                         </div>
                         <div class="commands__item">
                             <button class="commands__item-btn"><i class="fas fa-coins"></i> <span>pay</span></button>
                             <div class="commands__item-info">
-                                <p class="commands__item-info-text">...</p>
+                                <p class="commands__item-info-text">
+                                    Płacisz określoną kwotę drugiemu użytkownikowi. <br><br>
+                                    Użycie: <br>
+                                    !pay <@user> <kwota> <br><br>
+                                    Przykład: <br>
+                                    !pay @Mickey#0620 1234
+                                </p>
                             </div>
                         </div>
                         <div class="commands__item">
                             <button class="commands__item-btn"><i class="fas fa-coins"></i> <span>profil</span></button>
                             <div class="commands__item-info">
-                                <p class="commands__item-info-text">...</p>
+                                <p class="commands__item-info-text">
+                                    Wyświetla informację dotyczące użytkownika m.in. majątek, reputację, umiejętności oraz ekwipunek. <br><br>
+                                    Użycie: <br>
+                                    !profil [@user | ID user] <br><br>
+                                    Przykład: <br>
+                                    !profil @Mickey#0620
+                                </p>
                             </div>
                         </div>
                         <div class="commands__item">
                             <button class="commands__item-btn"><i class="fas fa-coins"></i> <span>rep</span></button>
                             <div class="commands__item-info">
-                                <p class="commands__item-info-text">...</p>
+                                <p class="commands__item-info-text">
+                                    Wyświetla aktualną reputację użytkownika oraz cooldown na oddanie punktu reputacji. <br><br>
+                                    Użycie: <br>
+                                    !rep <@user | ID user> <br><br>
+                                    Przykład: <br>
+                                    !rep @Mickey#0620
+                                </p>
                             </div>
                         </div>
                         <div class="commands__item">
                             <button class="commands__item-btn"><i class="fas fa-coins"></i> <span>rob</span></button>
                             <div class="commands__item-info">
-                                <p class="commands__item-info-text">...</p>
+                                <p class="commands__item-info-text">
+                                    Dokonujesz napadu na wyznaczonego użytkownika. Uważaj może Ci się nie udać i dostaniesz grzywnę! <br><br>
+                                    Użycie: <br>
+                                    !rob <@user | ID user> <br><br>
+                                    Przykład: <br>
+                                    !rob @Mickey#0620
+                                </p>
                             </div>
                         </div>
                         <div class="commands__item">
                             <button class="commands__item-btn"><i class="fas fa-coins"></i> <span>shop</span></button>
                             <div class="commands__item-info">
-                                <p class="commands__item-info-text">...</p>
+                                <p class="commands__item-info-text">
+                                    Wyświetla aktualną listę przedmiotów możliwych do zakupienia. <br><br>
+                                    Użycie: <br>
+                                    !shop
+                                </p>
                             </div>
                         </div>
                         <div class="commands__item">
                             <button class="commands__item-btn"><i class="fas fa-coins"></i> <span>slut</span></button>
                             <div class="commands__item-info">
-                                <p class="commands__item-info-text">...</p>
+                                <p class="commands__item-info-text">
+                                    Prostytuujesz się i zarabiasz. Pamiętaj, jeżeli Twoja robota nie spodoba się klientowi, nie dostaniesz wynagrodzenia! <br><br>
+                                    Użycie: <br>
+                                    !slut
+                                </p>
                             </div>
                         </div>
                         <div class="commands__item">
                             <button class="commands__item-btn"><i class="fas fa-coins"></i> <span>withdraw</span></button>
                             <div class="commands__item-info">
-                                <p class="commands__item-info-text">...</p>
+                                <p class="commands__item-info-text">
+                                    Wypłacasz określoną kwotę z banku. <br><br>
+                                    Użycie: <br>
+                                    !withdraw <kwota> <br><br>
+                                    Przykład: <br>
+                                    !withdraw 1000
+                                </p>
                             </div>
                         </div>
                         <div class="commands__item">
                             <button class="commands__item-btn"><i class="fas fa-coins"></i> <span>work</span></button>
                             <div class="commands__item-info">
-                                <p class="commands__item-info-text">...</p>
+                                <p class="commands__item-info-text">
+                                    Zarabiasz poprzez różne aktywności. <br><br>
+                                    Użycie: <br>
+                                    !work
+                                </p>
                             </div>
                         </div>
                         <div class="commands__item">
@@ -504,37 +629,57 @@
                         <div class="commands__item">
                             <button class="commands__item-btn"><i class="fas fa-info"></i> <span>channel-info</span></button>
                             <div class="commands__item-info">
-                                <p class="commands__item-info-text">...</p>
+                                <p class="commands__item-info-text">
+                                    Informacje o danym kanale. <br><br>
+                                    Użycie: <br>
+                                    !channel-info <#kanał/nazwa/ID> <br><br>
+                                    Przykład: <br>
+                                    !channel-info #help
+                                </p>
                             </div>
                         </div>
                         <div class="commands__item">
                             <button class="commands__item-btn"><i class="fas fa-info"></i> <span>help</span></button>
                             <div class="commands__item-info">
-                                <p class="commands__item-info-text">...</p>
+                                <p class="commands__item-info-text">
+                                    Spis funkcji naszego bota.
+                                </p>
                             </div>
                         </div>
                         <div class="commands__item">
                             <button class="commands__item-btn"><i class="fas fa-info"></i> <span>invite</span></button>
                             <div class="commands__item-info">
-                                <p class="commands__item-info-text">...</p>
+                                <p class="commands__item-info-text">
+                                    Link z zaproszeniem naszego bota.
+                                </p>
                             </div>
                         </div>
                         <div class="commands__item">
                             <button class="commands__item-btn"><i class="fas fa-info"></i> <span>role-info</span></button>
                             <div class="commands__item-info">
-                                <p class="commands__item-info-text">...</p>
+                                <p class="commands__item-info-text">
+                                    Informacje o danej roli. <br><br>
+                                    Użycie: <br>
+                                    !role-info <@rola/nazwa/ID> <br><br>
+                                    Przykład: <br>
+                                    !role-info 907221033260560405
+                                </p>
                             </div>
                         </div>
                         <div class="commands__item">
                             <button class="commands__item-btn"><i class="fas fa-info"></i> <span>serverinfo</span></button>
                             <div class="commands__item-info">
-                                <p class="commands__item-info-text">...</p>
+                                <p class="commands__item-info-text">
+                                    Informacje o serwerze, na którym jest używana komenda.
+                                </p>
                             </div>
                         </div>
                         <div class="commands__item">
                             <button class="commands__item-btn"><i class="fas fa-info"></i> <span>uptime</span></button>
                             <div class="commands__item-info">
-                                <p class="commands__item-info-text">...</p>
+                                <p class="commands__item-info-text">
+                                    Czas nieprzerwanej pracy naszego bota.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -702,103 +847,201 @@
                         <div class="commands__item">
                             <button class="commands__item-btn"><i class="fas fa-coins"></i> <span>add-money</span></button>
                             <div class="commands__item-info">
-                                <p class="commands__item-info-text">...</p>
+                                <p class="commands__item-info-text">
+                                    Dodaje określoną kwotę do majątku użytkownika. <br><br>
+                                    Użycie: <br>
+                                    !add-money <@user> <cash | bank> <kwota> <br><br>
+                                    Przykład: <br>
+                                    !add-money @Mickey#0620 cash 1234
+                                </p>
                             </div>
                         </div>
                         <div class="commands__item">
                             <button class="commands__item-btn"><i class="fas fa-coins"></i> <span>balance</span></button>
                             <div class="commands__item-info">
-                                <p class="commands__item-info-text">...</p>
+                                <p class="commands__item-info-text">
+                                    Pokazuje aktualny stan konta użytkownika. <br><br>
+                                    Użycie: <br>
+                                    !balance [@user, user ID] <br><br>
+                                    Przykład: <br>
+                                    !balance 858410509454802944
+                                </p>
                             </div>
                         </div>
                         <div class="commands__item">
                             <button class="commands__item-btn"><i class="fas fa-coins"></i> <span>blackjack</span></button>
                             <div class="commands__item-info">
-                                <p class="commands__item-info-text">...</p>
+                                <p class="commands__item-info-text">
+                                    Rozpoczyna rozgrywkę w karty. Wygrana gra zwraca dwukrotność postawionej kwoty. <br><br>
+                                    Użycie: <br>
+                                    !blackjack <kwota> <br><br>
+                                    Przykład: <br>
+                                    !blackjack 500
+                                </p>
                             </div>
                         </div>
                         <div class="commands__item">
                             <button class="commands__item-btn"><i class="fas fa-coins"></i> <span>buy</span></button>
                             <div class="commands__item-info">
-                                <p class="commands__item-info-text">...</p>
+                                <p class="commands__item-info-text">
+                                    Możliwość kupna przedmiotu ze sklepu. <br><br>
+                                    Użycie: <br>
+                                    !buy <ID item> <br><br>
+                                    Przykład: <br>
+                                    !buy 2
+                                </p>
                             </div>
                         </div>
                         <div class="commands__item">
                             <button class="commands__item-btn"><i class="fas fa-coins"></i> <span>coinflip</span></button>
                             <div class="commands__item-info">
-                                <p class="commands__item-info-text">...</p>
+                                <p class="commands__item-info-text">
+                                    Rozpoczyna grę w "Rzut monetą". Wygrana gra zwraca dwukrotność postawionej kwoty. <br><br>
+                                    Użycie: <br>
+                                    !coinflip <orzeł | reszka> <kwota> <br><br>
+                                    Przykład: <br>
+                                    !coinflip reszka 1234
+                                </p>
                             </div>
                         </div>
                         <div class="commands__item">
                             <button class="commands__item-btn"><i class="fas fa-coins"></i> <span>crime</span></button>
                             <div class="commands__item-info">
-                                <p class="commands__item-info-text">...</p>
+                                <p class="commands__item-info-text">
+                                    Dokonujesz przestępstwa. Złapanie przez policję powoduję karę grzywny. <br><br>
+                                    Użycie: <br>
+                                    !crime <br><br>
+                                    Adnotacje: <br>
+                                    Potrzebujesz broni aby dokonać przestępstwa!
+                                </p>
                             </div>
                         </div>
                         <div class="commands__item">
                             <button class="commands__item-btn"><i class="fas fa-coins"></i> <span>deposit</span></button>
                             <div class="commands__item-info">
-                                <p class="commands__item-info-text">...</p>
+                                <p class="commands__item-info-text">
+                                    Przenosisz swoje pieniądze do banku. <br><br>
+                                    Użycie: <br>
+                                    !deposit <kwota | all> <br><br>
+                                    Przykład: <br>
+                                    !deposit 1234
+                                </p>
                             </div>
                         </div>
                         <div class="commands__item">
                             <button class="commands__item-btn"><i class="fas fa-coins"></i> <span>hack</span></button>
                             <div class="commands__item-info">
-                                <p class="commands__item-info-text">...</p>
+                                <p class="commands__item-info-text">
+                                    Możliwość zhakowania konta bankowego innego użytkownika. <br><br>
+                                    Użycie: <br>
+                                    !hack <@User> <br><br>
+                                    Przykład: <br>
+                                    !hack @Mickey#0620 <br><br>
+                                    Adnotacje: <br>
+                                    Potrzebujesz "Umiejętność hakowania" ze sklepu.
+                                </p>
                             </div>
                         </div>
                         <div class="commands__item">
                             <button class="commands__item-btn"><i class="fas fa-coins"></i> <span>leaderboard</span></button>
                             <div class="commands__item-info">
-                                <p class="commands__item-info-text">...</p>
+                                <p class="commands__item-info-text">
+                                    Wyświetla top 10 najbogatszych osób na serwerze lub użytkowników z największą ilością reputacji. <br><br>
+                                    Użycie: <br>
+                                    !leaderboard [cash | bank | rep] <br><br>
+                                    Przykład: <br>
+                                    !leaderboard cash
+                                </p>
                             </div>
                         </div>
                         <div class="commands__item">
                             <button class="commands__item-btn"><i class="fas fa-coins"></i> <span>pay</span></button>
                             <div class="commands__item-info">
-                                <p class="commands__item-info-text">...</p>
+                                <p class="commands__item-info-text">
+                                    Płacisz określoną kwotę drugiemu użytkownikowi. <br><br>
+                                    Użycie: <br>
+                                    !pay <@user> <kwota> <br><br>
+                                    Przykład: <br>
+                                    !pay @Mickey#0620 1234
+                                </p>
                             </div>
                         </div>
                         <div class="commands__item">
                             <button class="commands__item-btn"><i class="fas fa-coins"></i> <span>profil</span></button>
                             <div class="commands__item-info">
-                                <p class="commands__item-info-text">...</p>
+                                <p class="commands__item-info-text">
+                                    Wyświetla informację dotyczące użytkownika m.in. majątek, reputację, umiejętności oraz ekwipunek. <br><br>
+                                    Użycie: <br>
+                                    !profil [@user | ID user] <br><br>
+                                    Przykład: <br>
+                                    !profil @Mickey#0620
+                                </p>
                             </div>
                         </div>
                         <div class="commands__item">
                             <button class="commands__item-btn"><i class="fas fa-coins"></i> <span>rep</span></button>
                             <div class="commands__item-info">
-                                <p class="commands__item-info-text">...</p>
+                                <p class="commands__item-info-text">
+                                    Wyświetla aktualną reputację użytkownika oraz cooldown na oddanie punktu reputacji. <br><br>
+                                    Użycie: <br>
+                                    !rep <@user | ID user> <br><br>
+                                    Przykład: <br>
+                                    !rep @Mickey#0620
+                                </p>
                             </div>
                         </div>
                         <div class="commands__item">
                             <button class="commands__item-btn"><i class="fas fa-coins"></i> <span>rob</span></button>
                             <div class="commands__item-info">
-                                <p class="commands__item-info-text">...</p>
+                                <p class="commands__item-info-text">
+                                    Dokonujesz napadu na wyznaczonego użytkownika. Uważaj może Ci się nie udać i dostaniesz grzywnę! <br><br>
+                                    Użycie: <br>
+                                    !rob <@user | ID user> <br><br>
+                                    Przykład: <br>
+                                    !rob @Mickey#0620
+                                </p>
                             </div>
                         </div>
                         <div class="commands__item">
                             <button class="commands__item-btn"><i class="fas fa-coins"></i> <span>shop</span></button>
                             <div class="commands__item-info">
-                                <p class="commands__item-info-text">...</p>
+                                <p class="commands__item-info-text">
+                                    Wyświetla aktualną listę przedmiotów możliwych do zakupienia. <br><br>
+                                    Użycie: <br>
+                                    !shop
+                                </p>
                             </div>
                         </div>
                         <div class="commands__item">
                             <button class="commands__item-btn"><i class="fas fa-coins"></i> <span>slut</span></button>
                             <div class="commands__item-info">
-                                <p class="commands__item-info-text">...</p>
+                                <p class="commands__item-info-text">
+                                    Prostytuujesz się i zarabiasz. Pamiętaj, jeżeli Twoja robota nie spodoba się klientowi, nie dostaniesz wynagrodzenia! <br><br>
+                                    Użycie: <br>
+                                    !slut
+                                </p>
                             </div>
                         </div>
                         <div class="commands__item">
                             <button class="commands__item-btn"><i class="fas fa-coins"></i> <span>withdraw</span></button>
                             <div class="commands__item-info">
-                                <p class="commands__item-info-text">...</p>
+                                <p class="commands__item-info-text">
+                                    Wypłacasz określoną kwotę z banku. <br><br>
+                                    Użycie: <br>
+                                    !withdraw <kwota> <br><br>
+                                    Przykład: <br>
+                                    !withdraw 1000
+                                </p>
                             </div>
                         </div>
                         <div class="commands__item">
                             <button class="commands__item-btn"><i class="fas fa-coins"></i> <span>work</span></button>
                             <div class="commands__item-info">
-                                <p class="commands__item-info-text">...</p>
+                                <p class="commands__item-info-text">
+                                    Zarabiasz poprzez różne aktywności. <br><br>
+                                    Użycie: <br>
+                                    !work
+                                </p>
                             </div>
                         </div>
                     </div>

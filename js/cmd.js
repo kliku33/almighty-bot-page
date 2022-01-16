@@ -1,22 +1,25 @@
 const search = document.querySelector('.commands__search')
-const item = document.querySelectorAll('.commands__item')
+const items = document.querySelectorAll('.commands__item')
 const menuSections = document.querySelectorAll('.commands__section')
 const menuTabs = document.querySelectorAll('.commands__btn')
 const accordion = document.querySelector('.commands__item-info')
 const accordionBtns = document.querySelectorAll('.commands__item-btn')
 const timesIcon = document.querySelector('.commands__search-icon-box .fa-times')
 const searchIcon = document.querySelector('.commands__search-icon-box .fa-search')
+const error = document.querySelector('.commands__error')
 
 const searchEngine = (e) => {
 
     const text = e.target.value.toLowerCase();
 
-    item.forEach(el => {
+    items.forEach(el => {
 
         if (el.textContent.toLowerCase().indexOf(text) !== -1) {
             el.style.display = 'block'
+            el.classList.add('item-active')
         } else {
-            el.style.display = 'none'
+			el.style.display = 'none'
+            el.classList.remove('item-active')
         }
     });
 
@@ -29,13 +32,22 @@ const searchEngine = (e) => {
 		timesIcon.style.display = 'none'
 		searchIcon.style.display = 'block'
 	}
+
+	let activeItems = document.querySelectorAll('.item-active')
+
+	if(activeItems.length == 0) {
+		error.style.display = 'block'
+	} else {
+		error.style.display = 'none'
+	}
 }
 
 const searchReset = () => {
 	search.value = ''
-	item.forEach(el => el.style.display = 'block')
+	items.forEach(el => el.style.display = 'block')
 	timesIcon.style.display = 'none'
 	searchIcon.style.display = 'block'
+	error.style.display = 'none'
 }
 
 const showInfo = id => {

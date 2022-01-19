@@ -201,7 +201,7 @@ body {
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-	padding: 1em 1em 18em;
+	padding: 1em 1em 8em;
 
 	&__title {
 		margin-bottom: 1em;
@@ -219,6 +219,7 @@ body {
 		display: flex;
 		align-items: center;
 		flex-direction: column;
+		margin: 1em;
 		padding: 2em 0;
 		width: 350px;
 
@@ -258,7 +259,7 @@ body {
 // STATISTICS
 .statistics {
 	padding: 1em;
-	background-color: #18191d;
+	background-color: $primary-dark;
 
 	&__text {
 		font-size: 1.6rem;
@@ -271,8 +272,8 @@ body {
 	align-items: center;
 	height: 100vh;
 	width: 100%;
-	background-color: #111;
-	color: #fff;
+	background-color: $black;
+	color: $white;
 	font-size: 3rem;
 }
 
@@ -286,7 +287,7 @@ body {
 .counter-item {
 	margin: 1em 3.5em;
 	width: 200px;
-	color: #fff;
+	color: $white;
 	text-align: center;
 }
 
@@ -313,7 +314,7 @@ body {
 	&__title {
 		margin-bottom: 1em;
 		text-align: center;
-		font-size: 4rem;
+		font-size: 3rem;
 	}
 
 	&__title .fas {
@@ -331,6 +332,7 @@ body {
 		display: flex;
 		align-items: center;
 		flex-direction: column;
+		margin: 1em;
 		width: 200px;
 	}
 
@@ -363,6 +365,7 @@ body {
 		margin: 0.8em 0 1.6em;
 		width: 100%;
 		font-size: 2.4rem;
+		border-radius: 50%;
 	}
 
 	&__links .fab {
@@ -627,7 +630,7 @@ body {
 
 // FOOTER
 footer {
-	background-color: #18191d;
+	background-color: $primary-dark;
 }
 
 .footer {
